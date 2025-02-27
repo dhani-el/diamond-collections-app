@@ -1,8 +1,10 @@
 import { Text, View,StyleSheet } from "react-native";
 
+import Authentication from "./UI/Authentication";
+
 export default function Index() {
   return <View style={Style.mainView}>
-            <Text>Edit app/index.tsx to edit this screen.</Text>
+            <Authentication/>
           </View>
 }
 
