@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     marginTop:150
   },
   buttonLinkStyle:{
-    width:"85%"
+    width:"100%"
   },
   buttonsContainer:{
     width:"100%",
