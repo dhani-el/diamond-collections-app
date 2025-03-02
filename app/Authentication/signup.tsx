@@ -29,9 +29,11 @@ export default function Signup(){
                         <TextInput mode="outlined" outlineStyle={{borderColor:"#DEDEDE",borderRadius:12}} placeholder="Email Address" inputMode="email" style={styles.inputs} />
                         <TextInput secureTextEntry right={<TextInput.Icon icon={"eye"} />} mode="outlined" outlineStyle={{borderColor:"#DEDEDE",borderRadius:12}}  placeholder="Password"  style={styles.inputs} />
                         <TextInput secureTextEntry right={<TextInput.Icon icon={"eye"} />} mode="outlined" outlineStyle={{borderColor:"#DEDEDE",borderRadius:12}}  placeholder="Confirm Password"  style={styles.inputs} />
-                        <Button textColor="white" style={styles.button}  >
-                            Submit
-                        </Button>
+                        <Link style={{width:"90%"}} href={"/Authentication/otp"}>
+                            <Button textColor="white" style={styles.button}  >
+                                Submit
+                            </Button>
+                        </Link>
                         <Text>Already have an account? <Link href="/Authentication/login" style={styles.signinLink} >Sign In</Link></Text>
                     </View>
                     <Text style={styles.terms} >
@@ -88,7 +90,7 @@ const styles  = StyleSheet.create({
         padding:16,
         fontSize:24,
         backgroundColor:"black",
-        width:"90%",
+        width:"100%",
         color:"white"
       },
     terms:{
