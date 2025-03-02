@@ -18,12 +18,12 @@ export default function Index() {
                 <Image style={styles.image} source={landingImage} />
                 <View style={styles.buttonsContainer}>
                     <Link style={styles.buttonLinkStyle} href={"/Authentication/signup"}>
-                      <Button mode="contained" textColor="white" style = {{...styles.buttons,...styles.signupButton}} >
+                      <Button  mode="contained" textColor="white" style = {{...styles.buttons,...styles.signupButton}} >
                         Sign Up
                       </Button>
                     </Link>
                     <Link style={styles.buttonLinkStyle} href={"/Authentication/login"}>
-                      <Button mode="contained"  textColor="white"   style = {{...styles.buttons,...styles.loginButton}}>Login</Button>
+                      <Button  mode="contained"  textColor="white"   style = {{...styles.buttons,...styles.loginButton}}>Login</Button>
                     </Link>
                 </View>
               </Container>
@@ -34,8 +34,8 @@ export default function Index() {
 const styles = StyleSheet.create({
   image:{
     objectFit:"fill",
-    width:250,
-    height:250,
+    width:300,
+    height:300,
     marginTop:150
   },
   buttonLinkStyle:{
@@ -45,22 +45,19 @@ const styles = StyleSheet.create({
     width:"100%",
     flex:1,
     alignItems:"center",
-    gap:20,
+    gap:36,
   },
   buttons:{
     padding:16,
-    fontSize:24,
-    width:"100%"
+    // fontSize:48,
+    width:"100%",
+    borderRadius:12
   },
   signupButton:{
     backgroundColor:"black"
   },
   loginButton:{
-    // borderColor:"black",
-    // borderStyle:"solid",
-    backgroundColor:"#dd571c",
-    // borderWidth:2,
-    // color:"black"
+    backgroundColor:"#ec7d3c",
   },
   mainContainer:{
     flex:1,
