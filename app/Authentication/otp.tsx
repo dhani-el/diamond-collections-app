@@ -16,7 +16,6 @@ export default function OtpPage(){
     </View>
 }
 
-
 const styles  = StyleSheet.create({
     container:{
         flex:1,
