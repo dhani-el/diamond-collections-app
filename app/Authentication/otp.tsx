@@ -2,6 +2,7 @@
 import { View,StyleSheet,Text,SafeAreaView } from "react-native";
 import { Button } from "react-native-paper";
 import OTPTextView from 'react-native-otp-textinput';
+import { Link } from "expo-router";
 
 export default function OtpPage(){
     return <View style={styles.container}>
@@ -10,7 +11,9 @@ export default function OtpPage(){
                     <Text style={styles.otpText}>ENTER OTP CODE</Text>
                     <View style={styles.optView} >
                         <OTPTextView  autoFocus  tintColor={"black"} textInputStyle={{...styles.roundedTextInput}} />
-                        <Button textColor="white" style={styles.submitButton} >Submit</Button>
+                        <Link style={styles.otpLink} href={"/SingleItemScreen/item"} >
+                            <Button textColor="white" style={styles.submitButton} >Submit</Button>
+                        </Link>
                     </View>
                 </View>
     </View>
@@ -29,7 +32,11 @@ const styles  = StyleSheet.create({
         padding:12,
         backgroundColor:"black",
         borderRadius:12,
-        color:"white"
+        color:"white",
+        width:"100%"
+    },
+    otpLink:{
+        width:"100%"
     },
     otpText:{
         fontSize:16,
