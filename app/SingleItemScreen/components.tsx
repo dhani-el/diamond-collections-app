@@ -1,11 +1,12 @@
 
-import { View,StyleSheet,Text,Image } from 'react-native';
-
+import { View,StyleSheet,Text,Image,Dimensions} from 'react-native';
+import { Key } from 'react';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
 import PagerView from 'react-native-pager-view';
 
 
-
+const screenHeight = Dimensions.get("screen").height
+const screenWidth = Dimensions.get("screen").width
 const iconSize = 24;
 const mainContainerPadding = 24;
 
@@ -39,20 +40,16 @@ export function Head(){
 }
 
 export function Items(){
-    return <PagerView style={styles.itemPagerView} initialPage={0}>
-                <AnItem/>
-                <View  key="2">
-                    <Text>Second page</Text>
-                </View>
-                
-                <View  key="3">
-                    <Text>Third page</Text>
-                </View>
+    return <PagerView style={styles.itemPagerView} initialPage={0}  >
+                <AnItem key={1} />
+                <AnItem key={2} />
+                <AnItem key={3} />
             </PagerView>
 }
+type AnItemProps = {key:Key|null}
 
-export function AnItem(){
-    return <View style={styles.itemPagerViewChildren} key={1}>
+export function AnItem({key}:AnItemProps){
+    return <View style={styles.itemPagerViewChildren} key={key}>
                 <Image source={require("../../assets/images/landingImage.jpeg")} />
             </View>
 }
@@ -86,7 +83,6 @@ const styles = StyleSheet.create({
         position:"absolute",
         top:0,
         left:0,
-        zIndex:-1
     },
     itemPagerViewChildren:{
         width:"100%",

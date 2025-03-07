@@ -1,5 +1,5 @@
 
-import { View,SafeAreaView,StyleSheet,Text,Image} from "react-native";
+import { View,SafeAreaView,StyleSheet} from "react-native";
 
 import { Head,Items } from "./components";
 
