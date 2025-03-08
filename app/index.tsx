@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     objectFit:"fill",
     width:300,
     height:300,
-    marginTop:150
+    marginTop:"20%"
   },
   buttonLinkStyle:{
     width:"100%"
@@ -48,10 +48,12 @@ const styles = StyleSheet.create({
     gap:36,
   },
   buttons:{
-    padding:16,
+    padding:8,
     // fontSize:48,
     width:"100%",
-    borderRadius:12
+    height:74,
+    borderRadius:12,
+    boxSizing:"content-box"
   },
   signupButton:{
     backgroundColor:"black"
@@ -61,7 +63,7 @@ const styles = StyleSheet.create({
   },
   mainContainer:{
     flex:1,
-    gap:100,
+    gap:"10%",
     alignItems:"center",
     padding:36,
     backgroundColor:"white"}

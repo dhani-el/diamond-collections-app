@@ -7,7 +7,7 @@ const mainContainerPadding = 24;
 
 export default function SingleItem(){
     return <View style={styles.container}>
-                <SafeAreaView/>
+                {/* <SafeAreaView/> */}
                 <Head/>
                 <Items/>
     </View>

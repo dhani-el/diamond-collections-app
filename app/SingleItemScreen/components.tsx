@@ -41,15 +41,15 @@ export function Head(){
 
 export function Items(){
     return <PagerView style={styles.itemPagerView} initialPage={0}  >
-                <AnItem key={1} />
-                <AnItem key={2} />
-                <AnItem key={3} />
+                <AnItem khey={1} />
+                <AnItem khey={2} />
+                <AnItem khey={3} />
             </PagerView>
 }
-type AnItemProps = {key:Key|null}
+type AnItemProps = {khey:Key|null}
 
-export function AnItem({key}:AnItemProps){
-    return <View style={styles.itemPagerViewChildren} key={key}>
+export function AnItem({khey}:AnItemProps){
+    return <View style={styles.itemPagerViewChildren} key={khey}>
                 <Image source={require("../../assets/images/landingImage.jpeg")} />
             </View>
 }

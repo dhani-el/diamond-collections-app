@@ -1,12 +1,14 @@
 
 
-import  {View,Text,SafeAreaView,StyleSheet,Image} from "react-native";
+import  {View,Text,SafeAreaView,StyleSheet,Image,Dimensions} from "react-native";
 import { Button,TextInput } from "react-native-paper";
 const landingImage  = require("../../assets/images/hicon.png")
 const apple = require("../../assets/images/icons8-apple-50.png");
 const google = require("../../assets/images/icons8-google-48.png");
 const facebook = require("../../assets/images/icons8-facebook-48.png");
 import { Link } from "expo-router";
+
+const screenHeight = Dimensions.get("screen").height
 
 export default function Signup(){
     return <View style={styles.container}>
@@ -56,24 +58,20 @@ const styles  = StyleSheet.create({
     },
     identtityText:{
         fontWeight:"800",
-        fontSize:36,
-        marginBottom:80
+        fontSize:28,
+        marginBottom:"5%"
     },
     inputView:{
         // flex:1,
         width:"100%",
         alignItems:"center",
         justifyContent:"center",
-        gap:24
+        gap:screenHeight * (1/100),
     },
     inputs:{
         width:"90%",
-        paddingLeft:2,
-        paddingTop:2,
-        paddingBottom:2,
-        paddingRight:2,
         backgroundColor:"#FAFAFA",
-        fontSize:14,
+        fontSize:12,
         fontWeight:"600"
     },
     authViews:{
@@ -87,8 +85,10 @@ const styles  = StyleSheet.create({
         height:50
     },
     button:{
-        padding:16,
+        // padding:16,
         fontSize:24,
+        height:52,
+        alignItems:"center",
         backgroundColor:"black",
         width:"100%",
         color:"white"
@@ -105,9 +105,9 @@ const styles  = StyleSheet.create({
     },
     image:{
         objectFit:"fill",
-        width:250,
-        height:250,
-        marginTop:20
+        width:screenHeight * (25/100),
+        height:screenHeight * (25/100),
+        marginTop:"1%"
       },
     signinLink:{
         fontWeight:"700",
