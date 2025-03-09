@@ -28,6 +28,30 @@ export function SearchBarComponent(){
             </View>
 }
 
+type ItemsAd = {
+    image:string,
+    text:string,
+    url:string,
+    code?:string,
+    pre?:string
+}[]
+
+export function ItemAds(){
+    const items:ItemsAd = [];
+
+    return <View>
+                {items.map(function(anItem){
+                    return <ASingleItemAd/>
+                })}
+            </View>
+
+}
+
+function ASingleItemAd(){
+    return <View>
+
+    </View>
+}
 
 const styles = StyleSheet.create({
     containerView:{
