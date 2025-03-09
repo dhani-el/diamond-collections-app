@@ -9,8 +9,13 @@ export function SearchBarComponent(){
     function handleSearchChange(value:string){
         setSearchQuery(()=>value)
     }
+
+    function RightProp(){
+        return <EvilIcons name="camera" />
+    }
+
     return <View style={styles.containerView}>
-                <Searchbar  mode="bar"  style = {styles.searchBarStyle} placeholder="Search For DC Anything"  onChangeText={handleSearchChange} value={searchQuery}  />
+                <Searchbar right={RightProp}  mode="bar" theme={{colors:{elevation:{level3:"white"}}}} style = {styles.searchBarStyle} placeholder="Search For DC Anything"  onChangeText={handleSearchChange} value={searchQuery}  />
             </View>
 }
 
