@@ -32,6 +32,14 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow diamond-collections-app to access your camera",
+          "microphonePermission": "Allow diamond-collections-app to access your microphone",
+          "recordAudioAndroid": true
+        }
       ]
     ],
     "experiments": {

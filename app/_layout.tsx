@@ -7,5 +7,6 @@ export default function RootLayout() {
             <Stack.Screen name="Authentication" options={{headerShown:false,title:"Authentication"}} />
             <Stack.Screen name="SingleItemScreen" options={{headerShown:false,title:"SingleItemScreen"}} />
             <Stack.Screen name="landingScreen" options={{headerShown:false,title:"landingScreen"}} />
+            <Stack.Screen name="cameraScreen" options={{headerShown:false,title:"cameraScreen"}} />
           </Stack>;
 }
